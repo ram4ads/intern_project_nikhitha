@@ -1,0 +1,16 @@
+.button{
+  border: none;
+  font-size: 40px;
+  margin-right: 10px;
+  background-color:skyblue;
+}
+.row-container{
+  display: flex;
+  flex-direction: row;
+}
+.name-field{
+  margin-left: 45px;
+}
+body{
+  margin: 5%;
+}
