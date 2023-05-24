@@ -1,0 +1,17 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: blanchedalmond;
+    padding: 20px;
+    border-width: 2px;
+    margin: 100px;
+    width: 400px;
+    height: 300px;
+}
+.button{
+    background-color: blue;
+    margin-left: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,18 @@
+.card-container{
+    display: flex;
+    flex-wrap:wrap ;
+    flex-direction: column;
+    margin-left: 20px;
+    background-color: azure;
+    padding: 20px;
+    border: solid 1px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+.ul-container{
+    list-style-type: none;
+}
+.image{
+    height: 200px;
+    width: 200px;
+}
