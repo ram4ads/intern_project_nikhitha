@@ -58,7 +58,7 @@ const Tab3 = () => {
             <div className="buttoncontainer">
                 <button onClick={handleClear} className='btn'>Clear</button> 
                 <button className="btn" onClick={handleSubmit}>Submit</button>
-                <button className="btn" onClick={handleNextTab}>Next</button> 
+                {/* <button className="btn" onClick={handleNextTab}>Next</button>  */}
             </div>
         </div>
 }

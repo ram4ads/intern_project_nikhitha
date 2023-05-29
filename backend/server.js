@@ -1,6 +1,7 @@
 const express= require('express');
 const bcrypt = require('bcrypt');
 const cors= require('cors');
+const router = express.Router();
 const mongoose=require('mongoose');
 const app= express();
 const user=require('./database');
@@ -15,17 +16,40 @@ mongoose.connect("mongodb+srv://nikhitha:nikhitha@cluster0.usbta9x.mongodb.net/?
 app.get('/', (req,res)=>{
     res.send('hello mongo db')
 })
+app.use('/', router);
 
-app.get('/userData',async(req,res)=>{
-    try{
-    const allUsersData=await user.find();
-    res.json(allUsersData);
+// app.get('/userData',async(req,res)=>{
+//     try{
+//     const allUsersData=await user.find();
+//     res.json(allUsersData);
+//     }
+//     catch(error){
+//         console.log(error);
+//     }
+// })
+router.get('/userData', async (req, res) => {
+    const { page, limit } = req.query;
+    const pageNumber = parseInt(page) || 1;
+    const pageSize = parseInt(limit) || 10;
+  
+    try {
+      const count = await user.countDocuments();
+      const totalPages = Math.ceil(count / pageSize);
+  
+      const cards = await user.find()
+        .skip((pageNumber - 1) * pageSize)
+        .limit(pageSize);
+  
+      res.json({
+        cards,
+        totalPages,
+        currentPage: pageNumber,
+      });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Server error' });
     }
-    catch(error){
-        console.log(error);
-    }
-})
-
+  });
 app.post("/data", async (req, res) => {
 
     try {

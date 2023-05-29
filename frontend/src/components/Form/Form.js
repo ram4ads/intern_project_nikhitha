@@ -44,9 +44,9 @@ const Form = () => {
           <TabList>
             <Tab>Registration Form</Tab>
             <Tab>Upload Photo</Tab>
-            <Tab>Signature</Tab>
             <Tab>Camera</Tab>
             <Tab>Captcha</Tab>
+            <Tab>signature</Tab>
           </TabList>
           <TabPanel>
             <Tab1 />
@@ -55,13 +55,13 @@ const Form = () => {
             <Tab2 />
           </TabPanel>
           <TabPanel>
-            <Tab3 />
-          </TabPanel>
-          <TabPanel>
             <Tab4 />
           </TabPanel>
           <TabPanel>
             <Tab5 />
+          </TabPanel>
+          <TabPanel>
+            <Tab3 />
           </TabPanel>
         </Tabs>
       </TabContext.Provider>

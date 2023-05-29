@@ -1,18 +1,36 @@
 .card-container{
     display: flex;
     flex-wrap:wrap ;
-    flex-direction: column;
+    flex-direction: row;
     margin-left: 20px;
-    background-color: azure;
+    justify-content: center;
+    align-items: center;
+    /* background-color: azure; */
     padding: 20px;
     border: solid 1px;
     margin-bottom: 10px;
     width: 300px;
 }
+.total-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .ul-container{
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .image{
-    height: 200px;
-    width: 200px;
+    height: 50px;
+    width: 50px;
+}
+.card{
+    border: 1px black solid;
+    height: 80px;
+    width: 220px;
+    margin-bottom: 10px;
+    text-align: center;
 }
